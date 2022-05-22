@@ -2,21 +2,31 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { HowItWorksComponent } from './public-components/how-it-works/how-it-works.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BooksModule } from './books/books.module';
+import { HomeComponent } from './public-components/home/home.component';
+import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './shared/material.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutUsComponent,
-    HowItWorksComponent
+
+    HowItWorksComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule
+    BrowserAnimationsModule,
+    BooksModule,
+    SharedModule,
+    MaterialModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
